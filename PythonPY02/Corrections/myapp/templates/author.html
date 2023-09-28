@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Page one author{% endblock %}
+
+{% block content %}
+{% if author %}
+    <article>
+        <p>{{ author['last_name'] }}</p>
+        <p>{{ author['first_name'] }}</p>
+        <p>{{ author['nationality'] }}</p>
+        <p>{{ author['famous_work'] }}</p>
+    </article>
+{% else %}
+   <p>No author</p>
+{% endif %}
+{% endblock %}

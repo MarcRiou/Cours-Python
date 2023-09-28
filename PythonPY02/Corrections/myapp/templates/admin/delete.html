@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+    <div class="centered-form">
+        <form action="/admin/delete" method="POST">
+            <div class="form-group">
+                <label for="user_id">ID du user à supprimer :</label>
+                <input type="text" class="form-control" id="user_id" name="user_id" required>
+            </div>
+            <p><button type="submit">Supprimer</button></p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
